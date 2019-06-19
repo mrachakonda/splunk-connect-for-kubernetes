@@ -19,7 +19,7 @@ global:
       # indexRoutingDefaultIndex tells which index to use for the default kubenetes namespace. Used with indexRouting. Default is main.
       indexRoutingDefaultIndex:
   kubernetes:
-    clusterName: "cluster_name"
+    clusterName: "odp-dev-usv"
   
   # Override global Fluentd config path and exclude path.
   # This is can be used to exclude verbose logs including various system and Helm/Tiller related logs.
@@ -47,7 +47,7 @@ splunk:
   # Configurations for HEC (HTTP Event Collector)
   hec:
     # host is required and should be provided by user
-    host:
+    host: https://31B5254C89013FE025AF139D0932E16A.gr7.us-east-1.eks.amazonaws.com
     # port to HEC, optional, default 8088
     port:
     # token is required and should be provided by user
@@ -61,7 +61,7 @@ splunk:
     # The PEM-format CA certificate for this client.
     # NOTE: The content of the certificate itself should be used here, not the file path.
     #       The certificate will be stored as a secret in kubernetes.
-    clientCert:
+    clientCert:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1EVXhOVEUxTVRjME5sb1hEVEk1TURVeE1qRTFNVGMwTmxvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTXFyCklDaENDSW82NFhiTXVCaTcwUG9jcEM0NitmNUVnRWJRVmpRc25FTlM1VlpmTHQvR0JvdXJ6ejVDQzBSU1R5SUwKVUpVQ1RNc2g3N2NtVDI4M3JpR3FQQ1RhWXdqRUdGVmZUNk9ISExUQlZkWWVieGRXVWNDbjVjL1dQMmtUVXZrMQp6cmNPK3B4NWJnZmY4MVdHVTFIMCs1cG1VSm5vTjVYeW12dkg1TmNVVGVhcFNCajFWd0pDT1Q5UHIrdmQzU1RQCk5GeTdIaHVKY01XdzB2MEZPdzBYaHdDaHlLVTYxTXhldFAwMjc0RFlsak1zMW10V1dqR3RvLzFZbTM0S3p3cHoKSzdZTlgvUUtGKzJkam00WHpyL0xoTjdVaCtneDNwbzlmeFluY0dScTQwVldMRFNhZlk5NlVNVzFCY0xPN3lzSApxZjlHakpZZEwxek1mKzB5dFhzQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFLTGNnUWh4N291L0Y0RVFMUksyOXBUZXpqVVUKT1Voa1Y1SkFqMUY0emxDNTRnKzFuRUhOcXZpdEJyQk1WRFpXN1BmYS95Q2llWU9EbE1hVElUK2tWWmJnQ3NtSwpUZkVadW9iZWluZ1BVL2NWdDczOWNFNmdQOFFmbmQ2bjBxd1EyL2xJV0ZCWU1RRGpxaTRoai92L3dXSzZESWJJCmZvZHlkZnFRUzFRQ3VMZEJHU0JRMmRsODkzRVRuVFc2Zktva3JrV2dlYmZmTUNqMnhCejczUExWV0ZTUjdIek4KTFg2bWFSZGtkREJydFFmaDhWeWtVbysvbzkxN3d3QnJkRi93MzFheVR2VGNnSXhmbXp6TzlCOFJqTmZaUndwcApCNFQ4S1lxWFRXM0Y5NWlDSHJtdWVaQVpoeXpKV3hKQ1VWcHVkZmJXODFhMS9GOGpRSzYrOTZHZGtvWT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
     # The private key for this client.
     # NOTE: The content of the key itself should be used here, not the file path.
     #       The key will be stored as a secret in kubernetes.
